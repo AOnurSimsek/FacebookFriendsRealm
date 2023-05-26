@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2857B1F72A202C6C00E8D38D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B1F62A202C6C00E8D38D /* UIColor+.swift */; };
+		2857B1FA2A20396000E8D38D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B1F92A20396000E8D38D /* Colors.swift */; };
+		2857B1FD2A203BCC00E8D38D /* InsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B1FC2A203BCC00E8D38D /* InsetLabel.swift */; };
+		2857B2022A20409E00E8D38D /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2012A20409E00E8D38D /* UITextField+.swift */; };
+		2857B2042A211E5600E8D38D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2032A211E5600E8D38D /* UIViewController+.swift */; };
+		2857B2262A21332500E8D38D /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2252A21332500E8D38D /* LoginScreenViewModel.swift */; };
+		2857B2292A21382B00E8D38D /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2282A21382B00E8D38D /* Observable.swift */; };
+		2857B22B2A215E9D00E8D38D /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B22A2A215E9D00E8D38D /* LoginRouter.swift */; };
+		2857B22D2A215ED300E8D38D /* BaseRoutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B22C2A215ED300E8D38D /* BaseRoutingProtocol.swift */; };
+		2857B22F2A215FD200E8D38D /* ScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B22E2A215FD200E8D38D /* ScreenBuilder.swift */; };
 		28F0CD4F2A1FA7A70055B1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CD4E2A1FA7A70055B1EE /* AppDelegate.swift */; };
-		28F0CD532A1FA7A70055B1EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CD522A1FA7A70055B1EE /* ViewController.swift */; };
 		28F0CD582A1FA7A80055B1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CD572A1FA7A80055B1EE /* Assets.xcassets */; };
 		28F0CD5B2A1FA7A80055B1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CD592A1FA7A80055B1EE /* LaunchScreen.storyboard */; };
 		28F0CD642A1FA9C20055B1EE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28F0CD632A1FA9C20055B1EE /* Alamofire */; };
@@ -40,12 +49,26 @@
 		28F0CDAE2A2006080055B1EE /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDAD2A2006080055B1EE /* MainScreenRouter.swift */; };
 		28F0CDB22A20065A0055B1EE /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDB02A20065A0055B1EE /* UserTableViewCell.swift */; };
 		28F0CDB32A20065A0055B1EE /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CDB12A20065A0055B1EE /* UserTableViewCell.xib */; };
+		28F0CDB82A2009EA0055B1EE /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDB62A2009EA0055B1EE /* LoginScreenViewController.swift */; };
+		28F0CDB92A2009EA0055B1EE /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CDB72A2009EA0055B1EE /* LoginScreenViewController.xib */; };
+		28F0CDD42A2019C00055B1EE /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDD32A2019C00055B1EE /* UIView+.swift */; };
+		28F0CDD62A201A200055B1EE /* SlidingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDD52A201A200055B1EE /* SlidingTextField.swift */; };
+		28F0CDD82A201B3D0055B1EE /* SlidingTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CDD72A201B3D0055B1EE /* SlidingTextField.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2857B1F62A202C6C00E8D38D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		2857B1F92A20396000E8D38D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2857B1FC2A203BCC00E8D38D /* InsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLabel.swift; sourceTree = "<group>"; };
+		2857B2012A20409E00E8D38D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		2857B2032A211E5600E8D38D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		2857B2252A21332500E8D38D /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
+		2857B2282A21382B00E8D38D /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		2857B22A2A215E9D00E8D38D /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		2857B22C2A215ED300E8D38D /* BaseRoutingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoutingProtocol.swift; sourceTree = "<group>"; };
+		2857B22E2A215FD200E8D38D /* ScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBuilder.swift; sourceTree = "<group>"; };
 		28F0CD4B2A1FA7A70055B1EE /* FacebookFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F0CD4E2A1FA7A70055B1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28F0CD522A1FA7A70055B1EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28F0CD572A1FA7A80055B1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28F0CD5A2A1FA7A80055B1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28F0CD5C2A1FA7A80055B1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +96,11 @@
 		28F0CDAD2A2006080055B1EE /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
 		28F0CDB02A20065A0055B1EE /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		28F0CDB12A20065A0055B1EE /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		28F0CDB62A2009EA0055B1EE /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		28F0CDB72A2009EA0055B1EE /* LoginScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
+		28F0CDD32A2019C00055B1EE /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		28F0CDD52A201A200055B1EE /* SlidingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingTextField.swift; sourceTree = "<group>"; };
+		28F0CDD72A201B3D0055B1EE /* SlidingTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlidingTextField.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +119,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2857B1F82A20395400E8D38D /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				2857B1FB2A203BC300E8D38D /* InsetLabel */,
+				28F0CDB52A2009B40055B1EE /* SlidingTextfield */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		2857B1FB2A203BC300E8D38D /* InsetLabel */ = {
+			isa = PBXGroup;
+			children = (
+				2857B1FC2A203BCC00E8D38D /* InsetLabel.swift */,
+			);
+			path = InsetLabel;
+			sourceTree = "<group>";
+		};
+		2857B2272A2137F100E8D38D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2857B2282A21382B00E8D38D /* Observable.swift */,
+				2857B22C2A215ED300E8D38D /* BaseRoutingProtocol.swift */,
+				2857B22E2A215FD200E8D38D /* ScreenBuilder.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		28F0CD422A1FA7A70055B1EE = {
 			isa = PBXGroup;
 			children = (
@@ -110,13 +165,13 @@
 		28F0CD4D2A1FA7A70055B1EE /* FacebookFriends */ = {
 			isa = PBXGroup;
 			children = (
+				2857B2272A2137F100E8D38D /* Utils */,
 				28F0CD722A1FAEA30055B1EE /* App */,
 				28F0CD6E2A1FAE400055B1EE /* Service */,
 				28F0CD6D2A1FAE350055B1EE /* Scenes */,
 				28F0CD6F2A1FAE4B0055B1EE /* Helpers */,
 				28F0CD712A1FAE890055B1EE /* Resources */,
 				28F0CD702A1FAE740055B1EE /* SupportingFiles */,
-				28F0CD522A1FA7A70055B1EE /* ViewController.swift */,
 			);
 			path = FacebookFriends;
 			sourceTree = "<group>";
@@ -124,6 +179,8 @@
 		28F0CD6D2A1FAE350055B1EE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2857B1F82A20395400E8D38D /* CustomViews */,
+				28F0CDB42A2009AE0055B1EE /* LoginScreen */,
 				28F0CDA82A2005E90055B1EE /* MainScreen */,
 			);
 			path = Scenes;
@@ -141,6 +198,10 @@
 		28F0CD6F2A1FAE4B0055B1EE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				28F0CDD32A2019C00055B1EE /* UIView+.swift */,
+				2857B1F62A202C6C00E8D38D /* UIColor+.swift */,
+				2857B2012A20409E00E8D38D /* UITextField+.swift */,
+				2857B2032A211E5600E8D38D /* UIViewController+.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -156,6 +217,7 @@
 		28F0CD712A1FAE890055B1EE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2857B1F92A20396000E8D38D /* Colors.swift */,
 				28F0CD572A1FA7A80055B1EE /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -254,7 +316,7 @@
 		28F0CDA82A2005E90055B1EE /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				28F0CDAF2A2006270055B1EE /* UserTableviewCell */,
+				28F0CDAF2A2006270055B1EE /* UserTableViewCell */,
 				28F0CDAB2A2006010055B1EE /* MainScreenViewController.swift */,
 				28F0CDA92A2005F90055B1EE /* MainScreenViewModel.swift */,
 				28F0CDAD2A2006080055B1EE /* MainScreenRouter.swift */,
@@ -262,13 +324,33 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
-		28F0CDAF2A2006270055B1EE /* UserTableviewCell */ = {
+		28F0CDAF2A2006270055B1EE /* UserTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				28F0CDB12A20065A0055B1EE /* UserTableViewCell.xib */,
 				28F0CDB02A20065A0055B1EE /* UserTableViewCell.swift */,
 			);
-			path = UserTableviewCell;
+			path = UserTableViewCell;
+			sourceTree = "<group>";
+		};
+		28F0CDB42A2009AE0055B1EE /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				28F0CDB72A2009EA0055B1EE /* LoginScreenViewController.xib */,
+				28F0CDB62A2009EA0055B1EE /* LoginScreenViewController.swift */,
+				2857B2252A21332500E8D38D /* LoginScreenViewModel.swift */,
+				2857B22A2A215E9D00E8D38D /* LoginRouter.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		28F0CDB52A2009B40055B1EE /* SlidingTextfield */ = {
+			isa = PBXGroup;
+			children = (
+				28F0CDD72A201B3D0055B1EE /* SlidingTextField.xib */,
+				28F0CDD52A201A200055B1EE /* SlidingTextField.swift */,
+			);
+			path = SlidingTextfield;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,8 +424,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28F0CDD82A201B3D0055B1EE /* SlidingTextField.xib in Resources */,
 				28F0CD5B2A1FA7A80055B1EE /* LaunchScreen.storyboard in Resources */,
 				28F0CDB32A20065A0055B1EE /* UserTableViewCell.xib in Resources */,
+				28F0CDB92A2009EA0055B1EE /* LoginScreenViewController.xib in Resources */,
 				28F0CD582A1FA7A80055B1EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,20 +440,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F0CD7C2A1FAF5C0055B1EE /* InfoResponseModel.swift in Sources */,
+				2857B1FA2A20396000E8D38D /* Colors.swift in Sources */,
 				28F0CDAA2A2005F90055B1EE /* MainScreenViewModel.swift in Sources */,
 				28F0CD972A1FB3890055B1EE /* PictureResponseModel.swift in Sources */,
 				28F0CD802A1FB02F0055B1EE /* NameResponseModel.swift in Sources */,
 				28F0CD932A1FB2D60055B1EE /* RegisteredResponseModel.swift in Sources */,
 				28F0CD872A1FB10C0055B1EE /* CoordinateResponseModel.swift in Sources */,
 				28F0CD912A1FB2710055B1EE /* LoginResponseModel.swift in Sources */,
+				2857B2042A211E5600E8D38D /* UIViewController+.swift in Sources */,
 				28F0CDA72A1FC1C00055B1EE /* Encodable+.swift in Sources */,
 				28F0CD8C2A1FB1EA0055B1EE /* ResultsResponseModel.swift in Sources */,
-				28F0CD532A1FA7A70055B1EE /* ViewController.swift in Sources */,
+				2857B1FD2A203BCC00E8D38D /* InsetLabel.swift in Sources */,
+				2857B2262A21332500E8D38D /* LoginScreenViewModel.swift in Sources */,
+				2857B22B2A215E9D00E8D38D /* LoginRouter.swift in Sources */,
 				28F0CDA12A1FB9DF0055B1EE /* ResultsRequestModel.swift in Sources */,
 				28F0CD772A1FAF240055B1EE /* UserAPI.swift in Sources */,
 				28F0CD892A1FB1470055B1EE /* TimezoneResponseModel.swift in Sources */,
 				28F0CD952A1FB34B0055B1EE /* IDResponseModel.swift in Sources */,
 				28F0CDB22A20065A0055B1EE /* UserTableViewCell.swift in Sources */,
+				2857B22F2A215FD200E8D38D /* ScreenBuilder.swift in Sources */,
+				28F0CDD42A2019C00055B1EE /* UIView+.swift in Sources */,
 				28F0CDAC2A2006010055B1EE /* MainScreenViewController.swift in Sources */,
 				28F0CDAE2A2006080055B1EE /* MainScreenRouter.swift in Sources */,
 				28F0CD9E2A1FB8AC0055B1EE /* Service.swift in Sources */,
@@ -378,8 +468,14 @@
 				28F0CD752A1FAF1D0055B1EE /* UserProvider.swift in Sources */,
 				28F0CDA52A1FBAA90055B1EE /* BaseDecodable+.swift in Sources */,
 				28F0CD4F2A1FA7A70055B1EE /* AppDelegate.swift in Sources */,
+				28F0CDD62A201A200055B1EE /* SlidingTextField.swift in Sources */,
 				28F0CD832A1FB08E0055B1EE /* LocationResponseModel.swift in Sources */,
+				2857B1F72A202C6C00E8D38D /* UIColor+.swift in Sources */,
+				2857B22D2A215ED300E8D38D /* BaseRoutingProtocol.swift in Sources */,
+				2857B2292A21382B00E8D38D /* Observable.swift in Sources */,
+				28F0CDB82A2009EA0055B1EE /* LoginScreenViewController.swift in Sources */,
 				28F0CD852A1FB0A30055B1EE /* StreetResponseModel.swift in Sources */,
+				2857B2022A20409E00E8D38D /* UITextField+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,8 +619,7 @@
 				INFOPLIST_FILE = FacebookFriends/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -533,9 +628,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wamonuop.FacebookFriends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -551,8 +649,7 @@
 				INFOPLIST_FILE = FacebookFriends/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,9 +658,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wamonuop.FacebookFriends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

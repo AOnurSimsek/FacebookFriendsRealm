@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+final class MainScreenViewModel {
+    
+    private let userName: String
+    init(userName: String) {
+        self.userName = userName
+    }
+}
