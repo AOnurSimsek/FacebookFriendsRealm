@@ -17,6 +17,12 @@
 		2857B22B2A215E9D00E8D38D /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B22A2A215E9D00E8D38D /* LoginRouter.swift */; };
 		2857B22D2A215ED300E8D38D /* BaseRoutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B22C2A215ED300E8D38D /* BaseRoutingProtocol.swift */; };
 		2857B22F2A215FD200E8D38D /* ScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B22E2A215FD200E8D38D /* ScreenBuilder.swift */; };
+		2857B2322A216F0800E8D38D /* Populatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2312A216F0800E8D38D /* Populatable.swift */; };
+		2857B2342A21713E00E8D38D /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2332A21713E00E8D38D /* UIImageView+.swift */; };
+		2857B2362A21789100E8D38D /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2352A21789100E8D38D /* UITableView+.swift */; };
+		2857B23A2A2187D100E8D38D /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2392A2187D100E8D38D /* UIApplication+.swift */; };
+		2857B23C2A218FBE00E8D38D /* BaseRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B23B2A218FBE00E8D38D /* BaseRefreshControl.swift */; };
+		2857B23E2A2192F900E8D38D /* DetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B23D2A2192F900E8D38D /* DetailScreenViewController.swift */; };
 		28F0CD4F2A1FA7A70055B1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CD4E2A1FA7A70055B1EE /* AppDelegate.swift */; };
 		28F0CD582A1FA7A80055B1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CD572A1FA7A80055B1EE /* Assets.xcassets */; };
 		28F0CD5B2A1FA7A80055B1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CD592A1FA7A80055B1EE /* LaunchScreen.storyboard */; };
@@ -67,6 +73,12 @@
 		2857B22A2A215E9D00E8D38D /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		2857B22C2A215ED300E8D38D /* BaseRoutingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoutingProtocol.swift; sourceTree = "<group>"; };
 		2857B22E2A215FD200E8D38D /* ScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBuilder.swift; sourceTree = "<group>"; };
+		2857B2312A216F0800E8D38D /* Populatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Populatable.swift; sourceTree = "<group>"; };
+		2857B2332A21713E00E8D38D /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		2857B2352A21789100E8D38D /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		2857B2392A2187D100E8D38D /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
+		2857B23B2A218FBE00E8D38D /* BaseRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRefreshControl.swift; sourceTree = "<group>"; };
+		2857B23D2A2192F900E8D38D /* DetailScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewController.swift; sourceTree = "<group>"; };
 		28F0CD4B2A1FA7A70055B1EE /* FacebookFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F0CD4E2A1FA7A70055B1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28F0CD572A1FA7A80055B1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,8 +154,18 @@
 				2857B2282A21382B00E8D38D /* Observable.swift */,
 				2857B22C2A215ED300E8D38D /* BaseRoutingProtocol.swift */,
 				2857B22E2A215FD200E8D38D /* ScreenBuilder.swift */,
+				2857B2312A216F0800E8D38D /* Populatable.swift */,
+				2857B23B2A218FBE00E8D38D /* BaseRefreshControl.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		2857B2302A216ED000E8D38D /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2857B23D2A2192F900E8D38D /* DetailScreenViewController.swift */,
+			);
+			path = DetailScreen;
 			sourceTree = "<group>";
 		};
 		28F0CD422A1FA7A70055B1EE = {
@@ -182,6 +204,7 @@
 				2857B1F82A20395400E8D38D /* CustomViews */,
 				28F0CDB42A2009AE0055B1EE /* LoginScreen */,
 				28F0CDA82A2005E90055B1EE /* MainScreen */,
+				2857B2302A216ED000E8D38D /* DetailScreen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -202,6 +225,9 @@
 				2857B1F62A202C6C00E8D38D /* UIColor+.swift */,
 				2857B2012A20409E00E8D38D /* UITextField+.swift */,
 				2857B2032A211E5600E8D38D /* UIViewController+.swift */,
+				2857B2332A21713E00E8D38D /* UIImageView+.swift */,
+				2857B2352A21789100E8D38D /* UITableView+.swift */,
+				2857B2392A2187D100E8D38D /* UIApplication+.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -448,6 +474,7 @@
 				28F0CD872A1FB10C0055B1EE /* CoordinateResponseModel.swift in Sources */,
 				28F0CD912A1FB2710055B1EE /* LoginResponseModel.swift in Sources */,
 				2857B2042A211E5600E8D38D /* UIViewController+.swift in Sources */,
+				2857B23E2A2192F900E8D38D /* DetailScreenViewController.swift in Sources */,
 				28F0CDA72A1FC1C00055B1EE /* Encodable+.swift in Sources */,
 				28F0CD8C2A1FB1EA0055B1EE /* ResultsResponseModel.swift in Sources */,
 				2857B1FD2A203BCC00E8D38D /* InsetLabel.swift in Sources */,
@@ -455,6 +482,7 @@
 				2857B22B2A215E9D00E8D38D /* LoginRouter.swift in Sources */,
 				28F0CDA12A1FB9DF0055B1EE /* ResultsRequestModel.swift in Sources */,
 				28F0CD772A1FAF240055B1EE /* UserAPI.swift in Sources */,
+				2857B2342A21713E00E8D38D /* UIImageView+.swift in Sources */,
 				28F0CD892A1FB1470055B1EE /* TimezoneResponseModel.swift in Sources */,
 				28F0CD952A1FB34B0055B1EE /* IDResponseModel.swift in Sources */,
 				28F0CDB22A20065A0055B1EE /* UserTableViewCell.swift in Sources */,
@@ -462,6 +490,7 @@
 				28F0CDD42A2019C00055B1EE /* UIView+.swift in Sources */,
 				28F0CDAC2A2006010055B1EE /* MainScreenViewController.swift in Sources */,
 				28F0CDAE2A2006080055B1EE /* MainScreenRouter.swift in Sources */,
+				2857B23A2A2187D100E8D38D /* UIApplication+.swift in Sources */,
 				28F0CD9E2A1FB8AC0055B1EE /* Service.swift in Sources */,
 				28F0CDA32A1FBA4E0055B1EE /* NetworkRequestable.swift in Sources */,
 				28F0CD7E2A1FAFAF0055B1EE /* UserResponseModel.swift in Sources */,
@@ -471,11 +500,14 @@
 				28F0CDD62A201A200055B1EE /* SlidingTextField.swift in Sources */,
 				28F0CD832A1FB08E0055B1EE /* LocationResponseModel.swift in Sources */,
 				2857B1F72A202C6C00E8D38D /* UIColor+.swift in Sources */,
+				2857B23C2A218FBE00E8D38D /* BaseRefreshControl.swift in Sources */,
+				2857B2362A21789100E8D38D /* UITableView+.swift in Sources */,
 				2857B22D2A215ED300E8D38D /* BaseRoutingProtocol.swift in Sources */,
 				2857B2292A21382B00E8D38D /* Observable.swift in Sources */,
 				28F0CDB82A2009EA0055B1EE /* LoginScreenViewController.swift in Sources */,
 				28F0CD852A1FB0A30055B1EE /* StreetResponseModel.swift in Sources */,
 				2857B2022A20409E00E8D38D /* UITextField+.swift in Sources */,
+				2857B2322A216F0800E8D38D /* Populatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

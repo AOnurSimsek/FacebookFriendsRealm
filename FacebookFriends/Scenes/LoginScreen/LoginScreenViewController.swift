@@ -9,8 +9,6 @@ import UIKit
 
 final class LoginScreenViewController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var scrollContentView: UIView!
     @IBOutlet weak var innerCardView: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var logoTitleLabel: UILabel!
@@ -32,28 +30,19 @@ final class LoginScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTextFields()
-        setCardView()
-        hideKeyboardWhenTappedAround()
+        setUI()
         bindViewModel()
+        hideKeyboardWhenTappedAround()
     }
     
-    private func bindViewModel() {
-        viewModel.userNameChecker.bind { [weak self] isValid in
-            guard let _self = self,
-                  let _isValid = isValid
-            else { return }
-            
-            _self.usernameView.setColor(isValid: _isValid)
-        }
-        
-        viewModel.loginError.bind { [weak self] error in
-            guard let _self = self,
-                  let _error = error
-            else { return }
-            
-            _self.showAlert(message: _error.description)
-        }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        hideProgressHUD()
+    }
+    
+    private func setUI() {
+        setTextFields()
+        setCardView()
     }
     
     private func setTextFields() {
@@ -72,12 +61,33 @@ final class LoginScreenViewController: UIViewController {
                                          opacity: 0.3)
     }
     
+    private func bindViewModel() {
+        viewModel.userNameChecker.bind { [weak self] isValid in
+            guard let _self = self,
+                  let _isValid = isValid
+            else { return }
+            
+            _self.usernameView.setColor(isValid: _isValid)
+        }
+        
+        viewModel.loginError.bind { [weak self] error in
+            guard let _self = self,
+                  let _error = error
+            else { return }
+            
+            _self.hideProgressHUD()
+            _self.showAlert(message: _error.description)
+        }
+    }
+    
     @IBAction func didPressLoginButton(_ sender: UIButton) {
+        showProgressHUD()
         viewModel.didPressLoginButton()
     }
     
 }
 
+// MARK: - SlidingTextFieldDelegate
 extension LoginScreenViewController: SlidingTextFieldDelegate {
     func keyboardStatus(status: KeyboardStatus,
                         keyboardHeight: CGFloat) {

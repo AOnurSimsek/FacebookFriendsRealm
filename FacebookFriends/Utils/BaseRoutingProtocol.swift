@@ -18,7 +18,7 @@ extension BaseRoutingProtocol {
         
         window.rootViewController = UINavigationController(rootViewController: destination)
         UIView.transition(with: window,
-                          duration: 0.3,
+                          duration: 0.5,
                           options: transistionType,
                           animations: {})
     }

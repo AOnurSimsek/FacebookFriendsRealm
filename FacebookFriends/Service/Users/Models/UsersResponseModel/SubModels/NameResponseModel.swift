@@ -11,4 +11,8 @@ struct NameResponseModel: Decodable {
     let title: String?
     let first: String?
     let last: String?
+    
+    func getUSerFullName() -> String {
+        return (title ?? "") + " " + (first ?? "") + " " + (last ?? "")
+    }
 }

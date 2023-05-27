@@ -10,6 +10,7 @@ import UIKit
 enum DestinationBuilderPageType {
     case LoginScreen
     case MainScreen(String)
+    case DetailScreen(UserResponseModel)
 }
 
 final class ScreenBuilder {
@@ -21,8 +22,15 @@ final class ScreenBuilder {
             let controller: LoginScreenViewController = .init(viewModel: viewModel)
             return controller
         case .MainScreen(let userName):
-            let viewModel: MainScreenViewModel = .init(userName: userName)
+            let networkService: UsersAPIProtocol = UsersAPI()
+            let router: MainScreenRouter = .init()
+            let viewModel: MainScreenViewModel = .init(userName: userName,
+                                                       networkService: networkService,
+                                                       router: router)
             let destinationVC: MainScreenViewController = .init(viewModel: viewModel)
+            return destinationVC
+        case .DetailScreen(let model):
+            let destinationVC: DetailScreenViewController = .init()
             return destinationVC
         }
     }

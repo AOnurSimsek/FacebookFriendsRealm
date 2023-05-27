@@ -55,7 +55,9 @@ final class LoginViewModel {
             return
         }
         
-        router.route(to: .mainScreen(userName ?? ""),
-                     sourceVC: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.router.route(to: .mainScreen(self.userName ?? ""),
+                              sourceVC: nil)
+        }
     }
 }
