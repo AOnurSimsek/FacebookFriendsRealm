@@ -53,8 +53,6 @@
 		28F0CDAA2A2005F90055B1EE /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDA92A2005F90055B1EE /* MainScreenViewModel.swift */; };
 		28F0CDAC2A2006010055B1EE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDAB2A2006010055B1EE /* MainScreenViewController.swift */; };
 		28F0CDAE2A2006080055B1EE /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDAD2A2006080055B1EE /* MainScreenRouter.swift */; };
-		28F0CDB22A20065A0055B1EE /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDB02A20065A0055B1EE /* UserTableViewCell.swift */; };
-		28F0CDB32A20065A0055B1EE /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CDB12A20065A0055B1EE /* UserTableViewCell.xib */; };
 		28F0CDB82A2009EA0055B1EE /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDB62A2009EA0055B1EE /* LoginScreenViewController.swift */; };
 		28F0CDB92A2009EA0055B1EE /* LoginScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CDB72A2009EA0055B1EE /* LoginScreenViewController.xib */; };
 		28F0CDD42A2019C00055B1EE /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CDD32A2019C00055B1EE /* UIView+.swift */; };
@@ -106,8 +104,6 @@
 		28F0CDA92A2005F90055B1EE /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 		28F0CDAB2A2006010055B1EE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		28F0CDAD2A2006080055B1EE /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
-		28F0CDB02A20065A0055B1EE /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
-		28F0CDB12A20065A0055B1EE /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		28F0CDB62A2009EA0055B1EE /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		28F0CDB72A2009EA0055B1EE /* LoginScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginScreenViewController.xib; sourceTree = "<group>"; };
 		28F0CDD32A2019C00055B1EE /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -342,21 +338,11 @@
 		28F0CDA82A2005E90055B1EE /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				28F0CDAF2A2006270055B1EE /* UserTableViewCell */,
 				28F0CDAB2A2006010055B1EE /* MainScreenViewController.swift */,
 				28F0CDA92A2005F90055B1EE /* MainScreenViewModel.swift */,
 				28F0CDAD2A2006080055B1EE /* MainScreenRouter.swift */,
 			);
 			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		28F0CDAF2A2006270055B1EE /* UserTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				28F0CDB12A20065A0055B1EE /* UserTableViewCell.xib */,
-				28F0CDB02A20065A0055B1EE /* UserTableViewCell.swift */,
-			);
-			path = UserTableViewCell;
 			sourceTree = "<group>";
 		};
 		28F0CDB42A2009AE0055B1EE /* LoginScreen */ = {
@@ -452,7 +438,6 @@
 			files = (
 				28F0CDD82A201B3D0055B1EE /* SlidingTextField.xib in Resources */,
 				28F0CD5B2A1FA7A80055B1EE /* LaunchScreen.storyboard in Resources */,
-				28F0CDB32A20065A0055B1EE /* UserTableViewCell.xib in Resources */,
 				28F0CDB92A2009EA0055B1EE /* LoginScreenViewController.xib in Resources */,
 				28F0CD582A1FA7A80055B1EE /* Assets.xcassets in Resources */,
 			);
@@ -485,7 +470,6 @@
 				2857B2342A21713E00E8D38D /* UIImageView+.swift in Sources */,
 				28F0CD892A1FB1470055B1EE /* TimezoneResponseModel.swift in Sources */,
 				28F0CD952A1FB34B0055B1EE /* IDResponseModel.swift in Sources */,
-				28F0CDB22A20065A0055B1EE /* UserTableViewCell.swift in Sources */,
 				2857B22F2A215FD200E8D38D /* ScreenBuilder.swift in Sources */,
 				28F0CDD42A2019C00055B1EE /* UIView+.swift in Sources */,
 				28F0CDAC2A2006010055B1EE /* MainScreenViewController.swift in Sources */,
