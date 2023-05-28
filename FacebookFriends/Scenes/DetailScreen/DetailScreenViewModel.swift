@@ -157,6 +157,7 @@ final class DetailScreenViewModel {
     
 }
 
+// MARK: - CollectionViewHeightCalculator
 extension DetailScreenViewModel: TextHeightCalculatorProtocol {
     func getCellHeight(for section: Int) -> CGSize {
         let currentSection = getSection(for: section)

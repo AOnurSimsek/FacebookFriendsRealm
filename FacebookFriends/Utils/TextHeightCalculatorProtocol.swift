@@ -26,4 +26,5 @@ extension TextHeightCalculatorProtocol {
 
        return estimatedLabelFrame.height.rounded(.up)
     }
+    
 }

@@ -21,6 +21,7 @@ final class ScreenBuilder {
             let viewModel: LoginViewModel = .init(router: router)
             let controller: LoginScreenViewController = .init(viewModel: viewModel)
             return controller
+            
         case .MainScreen(let userName):
             let networkService: UsersAPIProtocol = UsersAPI()
             let realmManager: RealmManager = .init()
@@ -31,6 +32,7 @@ final class ScreenBuilder {
                                                        realmManager: realmManager)
             let destinationVC: MainScreenViewController = .init(viewModel: viewModel)
             return destinationVC
+            
         case .DetailScreen(let userModel):
             let router: DetailScreenRouter = .init()
             let viewModel: DetailScreenViewModel = .init(userModel: userModel,
@@ -38,5 +40,7 @@ final class ScreenBuilder {
             let destinationVC: DetailScreenViewController = .init(viewModel: viewModel)
             return destinationVC
         }
+        
     }
+    
 }

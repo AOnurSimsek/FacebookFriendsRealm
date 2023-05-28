@@ -16,6 +16,7 @@ extension UITextField {
         self.leftView = paddingView
         self.leftViewMode = .always
     }
+    
     func setRightPaddingPoints(_ value:CGFloat) {
         let paddingView = UIView(frame: CGRect(x: 0,
                                                y: 0,
@@ -24,4 +25,5 @@ extension UITextField {
         self.rightView = paddingView
         self.rightViewMode = .always
     }
+    
 }

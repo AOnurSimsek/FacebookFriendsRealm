@@ -26,4 +26,5 @@ final class Observable<T> {
         self.listener = listener
         listener?(value)
     }
+    
 }
