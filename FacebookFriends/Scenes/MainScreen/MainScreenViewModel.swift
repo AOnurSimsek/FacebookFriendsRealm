@@ -7,12 +7,6 @@
 
 import UIKit
 
-enum ProgressHudState {
-    case shown
-    case hidden
-    case refreshHidden
-}
-
 enum GetUserDataStarterType {
     case refresh
     case normal
