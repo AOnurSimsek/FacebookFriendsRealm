@@ -52,39 +52,31 @@ final class MainScreenViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.userModel.bind { [weak self] userModels in
-            guard let _userModels = userModels,
-                  !_userModels.isEmpty
-            else { return }
-            
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        }
-        
-        viewModel.mainScreenError.bind { [weak self] error in
-            guard let _error = error
-            else { return }
-            
-            switch _error {
-            case .networkError(let message),
-                 .unknown(let message):
-                self?.showAlert(message: message + "\n" + "You can pull to refresh")
-            }
-        }
-        
-        viewModel.progressHudState.bind { [weak self] state in
+        viewModel.screenState.bind { [weak self] state in
             switch state {
-            case .shown:
+            case .showProgressHUD:
                 self?.showProgressHUD()
-            case .hidden:
+            
+            case .hideProgressHUD:
                 self?.hideProgressHUD()
-            case .refreshHidden:
+                
+            case .hideRefreshHUD:
                 self?.refreshControl.endRefreshing()
+            
+            case .dataReached:
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+                
+            case .error(let errorDescription):
+                self?.showAlert(message: errorDescription)
+            
             default:
                 return
             }
+            
         }
+        
     }
     
 }

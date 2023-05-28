@@ -24,7 +24,7 @@ final class loginRouter: LoginRouterProtocol {
         case .mainScreen(let userName):
             let destinationVC = ScreenBuilder().build(type: .MainScreen(userName))
             showDestinationasNewRootWindows(destination: destinationVC,
-                                            transistionType: .transitionCrossDissolve)
+                                            transistionType: .transitionFlipFromRight)
         }
     }
 }

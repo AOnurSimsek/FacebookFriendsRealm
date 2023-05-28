@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum MainScreenErrors {
-    case networkError(String)
-    case unknown(String)
-}
-
 enum ProgressHudState {
     case shown
     case hidden
@@ -23,15 +18,23 @@ enum GetUserDataStarterType {
     case normal
 }
 
+enum MainScreenState {
+    case showProgressHUD
+    case hideProgressHUD
+    case hideRefreshHUD
+    case dataReached
+    case error(String)
+}
+
 final class MainScreenViewModel {
     
-    let userModel: Observable<[UserResponseModel]?> = Observable(nil)
-    let mainScreenError: Observable<MainScreenErrors?> = Observable(nil)
-    let progressHudState: Observable<ProgressHudState?> = Observable(nil)
+    private var userModel: [UserResponseModel]?
     private let userName: String
     private let networkService: UsersAPIProtocol
     private let router: MainScreenRouterProtocol
     private let realmManager: RealmManager
+    
+    let screenState: Observable<MainScreenState?> = Observable(nil)
     
     init(userName: String,
          networkService: UsersAPIProtocol,
@@ -44,11 +47,11 @@ final class MainScreenViewModel {
     }
     
     func getUserModel(at index: Int) -> UserResponseModel? {
-        return userModel.value?[index]
+        return userModel?[index]
     }
     
     func getUserModelCount() -> Int {
-        return userModel.value?.count ?? 0
+        return userModel?.count ?? 0
     }
     
     func getUserData(starter: GetUserDataStarterType) {
@@ -56,7 +59,7 @@ final class MainScreenViewModel {
         case .refresh:
             getUserDataFromService(starter: .refresh)
         case .normal:
-            progressHudState.value = .shown
+            screenState.value = .showProgressHUD
             getRealmUserData()
         }
     }
@@ -65,8 +68,8 @@ final class MainScreenViewModel {
         if realmManager.hasRealmModel(userName: userName) {
             if let userData = realmManager.getUsersData(),
                !userData.isEmpty {
-                userModel.value = userData
-                progressHudState.value = .hidden
+                userModel = userData
+                screenState.value = .hideProgressHUD
             } else {
                 getUserDataFromService(starter: .normal)
             }
@@ -80,29 +83,26 @@ final class MainScreenViewModel {
             guard let results = response.results,
                   !results.isEmpty
             else {
-                self.mainScreenError.value = .networkError("An unkown error occured. Try again later.")
+                self.screenState.value = .error("An unkown error occured. Try again later.")
                 return
             }
             
-            self.userModel.value = response.results
+            self.userModel = response.results
             self.realmManager.addRealmModel(userName: self.userName,
                                             userModels: results,
                                             operationType: (starter == .refresh) ? .update : .write)
+            self.screenState.value = .dataReached
         }.catch { error in
-            print("Error at MainScreenViewModel getResults")
-            self.mainScreenError.value = .networkError(error.localizedDescription)
+            print("Error at MainScreenViewModel getResults : " + error.localizedDescription)
+            self.screenState.value = .error(error.localizedDescription)
         }.finally {
             switch starter {
             case .normal:
-                self.progressHudState.value = .hidden
+                self.screenState.value = .hideProgressHUD
             case .refresh:
-                self.progressHudState.value = .refreshHidden
+                self.screenState.value = .hideRefreshHUD
             }
         }
-    }
-    
-    private func saveToRealm(userData: [UserResponseModel]) {
-        
     }
     
     func didSelectUser(at index: Int,

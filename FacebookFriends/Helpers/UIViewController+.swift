@@ -108,7 +108,7 @@ extension UIViewController {
         return NSStringFromClass(self.classForCoder).components(separatedBy: ".").last!
     }
     
-    func showProgressHUD(isTop: Bool = false) {
+    func showProgressHUD() {
         var isShown = false
         for item in self.view.subviews
             where item.restorationIdentifier == self.className {
@@ -123,9 +123,7 @@ extension UIViewController {
             activityIndicator.style = .whiteLarge
             activityIndicator.color = Colors.blue
             activityIndicator.center = CGPoint(x: UIScreen.main.bounds.width / 2,
-                                               y: isTop
-                                                ? UIScreen.main.bounds.height * 0.1
-                                                : UIScreen.main.bounds.height / 2)
+                                               y: UIScreen.main.bounds.height / 2)
             view.addSubview(activityIndicator)
             DispatchQueue.main.async {
                 activityIndicator.startAnimating()
