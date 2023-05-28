@@ -7,17 +7,13 @@
 
 import Foundation
 
-struct UserResponseModel: Decodable {
-    let gender: String?
+struct UserResponseModel: Codable {
     let name: NameResponseModel?
     let location: LocationResponseModel?
     let email: String?
-    let login: LoginResponseModel?
-    let dob: RegisteredResponseModel?
-    let registered: RegisteredResponseModel?
+    let dob: DateOfBirthResponseModel?
     let phone: String?
     let cell: String?
-    let ID: IDResponseModel?
     let picture: PictureResponseModel?
     let nat: String?
 }

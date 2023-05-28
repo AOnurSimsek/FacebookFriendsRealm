@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StreetResponseModel: Decodable {
+struct StreetResponseModel: Codable {
     let number: Int?
     let name: String?
 }

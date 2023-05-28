@@ -67,14 +67,15 @@ final class MainScreenViewController: UIViewController {
             else { return }
             
             switch _error {
-            case.networkError(let message):
+            case .networkError(let message),
+                 .unknown(let message):
                 self?.showAlert(message: message + "\n" + "You can pull to refresh")
             }
         }
         
         viewModel.progressHudState.bind { [weak self] state in
             switch state {
-            case.shown:
+            case .shown:
                 self?.showProgressHUD()
             case .hidden:
                 self?.hideProgressHUD()

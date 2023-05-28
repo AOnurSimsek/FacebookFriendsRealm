@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct PictureResponseModel: Decodable {
+struct PictureResponseModel: Codable {
     let large: String?
     let medium: String?
-    let thumbnail: String?
 }

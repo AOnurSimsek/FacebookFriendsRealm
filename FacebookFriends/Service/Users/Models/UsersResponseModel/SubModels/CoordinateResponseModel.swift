@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CoordinateResponseModel: Decodable {
+struct CoordinateResponseModel: Codable {
     let latitude: String?
     let longitude: String?
 }

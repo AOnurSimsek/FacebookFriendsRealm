@@ -9,5 +9,4 @@ import Foundation
 
 struct ResultsResponseModel: Decodable {
     let results: [UserResponseModel]?
-    let info: InfoResponseModel?
 }

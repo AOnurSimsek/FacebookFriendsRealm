@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NameResponseModel: Decodable {
+struct NameResponseModel: Codable {
     let title: String?
     let first: String?
     let last: String?

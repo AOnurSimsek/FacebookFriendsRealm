@@ -37,7 +37,7 @@ enum DetailScreenErrorTypes: Error {
 
 enum DetailScreenCollectionViewCellType: Equatable {
     case contact(UserContactModel?)
-    case dateofBirth(RegisteredResponseModel?)
+    case dateofBirth(DateOfBirthResponseModel?)
     case location(LocationResponseModel?)
     case nationality(String?)
     

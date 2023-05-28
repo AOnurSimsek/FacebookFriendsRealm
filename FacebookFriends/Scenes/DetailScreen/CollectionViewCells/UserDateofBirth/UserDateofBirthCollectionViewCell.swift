@@ -29,7 +29,7 @@ final class UserDateofBirthCollectionViewCell: UICollectionViewCell {
 
 extension UserDateofBirthCollectionViewCell: Populatable {
     func populate(with model: Any?) {
-        guard let item = model as? RegisteredResponseModel
+        guard let item = model as? DateOfBirthResponseModel
         else { return }
         
         dateLabel.text = (item.date ?? "").toOtherDate()

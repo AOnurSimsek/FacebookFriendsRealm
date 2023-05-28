@@ -23,10 +23,12 @@ final class ScreenBuilder {
             return controller
         case .MainScreen(let userName):
             let networkService: UsersAPIProtocol = UsersAPI()
+            let realmManager: RealmManager = .init()
             let router: MainScreenRouter = .init()
             let viewModel: MainScreenViewModel = .init(userName: userName,
                                                        networkService: networkService,
-                                                       router: router)
+                                                       router: router,
+                                                       realmManager: realmManager)
             let destinationVC: MainScreenViewController = .init(viewModel: viewModel)
             return destinationVC
         case .DetailScreen(let userModel):
