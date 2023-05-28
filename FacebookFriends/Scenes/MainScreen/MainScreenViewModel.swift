@@ -29,11 +29,11 @@ final class MainScreenViewModel {
     let progressHudState: Observable<ProgressHudState?> = Observable(nil)
     private let userName: String
     private let networkService: UsersAPIProtocol
-    private let router: MainScreenRouter
+    private let router: MainScreenRouterProtocol
     
     init(userName: String,
          networkService: UsersAPIProtocol,
-         router: MainScreenRouter) {
+         router: MainScreenRouterProtocol) {
         self.userName = userName
         self.networkService = networkService
         self.router = router

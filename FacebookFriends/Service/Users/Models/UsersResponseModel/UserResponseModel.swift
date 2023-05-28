@@ -13,6 +13,7 @@ struct UserResponseModel: Decodable {
     let location: LocationResponseModel?
     let email: String?
     let login: LoginResponseModel?
+    let dob: RegisteredResponseModel?
     let registered: RegisteredResponseModel?
     let phone: String?
     let cell: String?

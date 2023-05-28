@@ -25,10 +25,21 @@ final class MainScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationBarStyle(type: .blue)
         setupTableView()
         bindViewModel()
         viewModel.getUserData(starter: .normal)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationBar()
+    }
+    
+    private func setNavigationBar() {
+        setNavigationBarStyle(type: .color,
+                              color: Colors.blue,
+                              isBarShadowOpened: true,
+                              title: "Friends")
     }
     
     private func bindViewModel() {

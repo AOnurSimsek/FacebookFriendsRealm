@@ -29,8 +29,11 @@ final class ScreenBuilder {
                                                        router: router)
             let destinationVC: MainScreenViewController = .init(viewModel: viewModel)
             return destinationVC
-        case .DetailScreen(let model):
-            let destinationVC: DetailScreenViewController = .init()
+        case .DetailScreen(let userModel):
+            let router: DetailScreenRouter = .init()
+            let viewModel: DetailScreenViewModel = .init(userModel: userModel,
+                                                         router: router)
+            let destinationVC: DetailScreenViewController = .init(viewModel: viewModel)
             return destinationVC
         }
     }

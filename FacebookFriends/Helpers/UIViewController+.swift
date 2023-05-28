@@ -8,7 +8,7 @@
 import UIKit
 
 enum NavigationBarType {
-    case blue
+    case color
     case clear
     case hidden
 }
@@ -40,22 +40,25 @@ extension UIViewController {
         self.setNeedsStatusBarAppearanceUpdate()
     }
     
-    func setNavigationBarStyle(type: NavigationBarType){
+    func setNavigationBarStyle(type: NavigationBarType,
+                               color: UIColor,
+                               isBarShadowOpened: Bool,
+                               title: String = ""){
         switch type {
-        case .blue:
-            setStatusbarColor(color: Colors.blue)
+        case .color:
+            setStatusbarColor(color: color)
             self.navigationController?.navigationBar.setBackgroundImage(UIImage(),
                                                                         for:.default)
             self.navigationController?.navigationBar.shadowImage = UIImage()
             self.navigationController?.navigationBar.layoutIfNeeded()
-            self.navigationController?.navigationBar.barTintColor = Colors.blue
-            self.navigationController?.navigationBar.backgroundColor = Colors.blue
+            self.navigationController?.navigationBar.barTintColor = color
+            self.navigationController?.navigationBar.backgroundColor = color
             self.navigationController?.navigationBar.isTranslucent = false
-            setNavigationBarShadow(color: Colors.navigationBarLowBlackShadow,
+            setNavigationBarShadow(color: isBarShadowOpened ? Colors.navigationBarLowBlackShadow : .clear,
                                    opacity: 1,
                                    radius: 8,
                                    offset: CGSize(width: 0, height: 10))
-            setNavigationBarTitle(title: "Friends")
+            setNavigationBarTitle(title: title)
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 21,
                                                                                                                            weight: .heavy),
                                                                             NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -67,7 +70,7 @@ extension UIViewController {
             self.navigationController?.navigationBar.isTranslucent = true
             self.navigationController?.navigationBar.backgroundColor = .clear
             setNavigationBarShadow(color: .clear)
-            setNavigationBarTitle(title: "")
+            setNavigationBarTitle(title: title)
         case .hidden:
             setStatusbarColor(color: .clear)
             self.navigationController?.setNavigationBarHidden(false,
