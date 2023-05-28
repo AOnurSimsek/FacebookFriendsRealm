@@ -40,6 +40,7 @@ final class MainScreenViewController: UIViewController {
                               color: Colors.blue,
                               isBarShadowOpened: true,
                               title: "Friends")
+        setNavigationBarBackBarButtonItem()
     }
     
     private func bindViewModel() {

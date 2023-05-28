@@ -89,6 +89,13 @@ extension UIViewController {
         self.navigationController?.navigationBar.layer.shadowOffset = offset
     }
     
+    func setNavigationBarBackBarButtonItem() {
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = Colors.darkGray
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "arrowLeft")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "arrowLeft")
+    }
+    
     func setNavigationBarTitle(title: String?){
         self.navigationItem.title = title
         
