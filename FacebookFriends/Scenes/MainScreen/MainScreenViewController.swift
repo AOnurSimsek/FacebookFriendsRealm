@@ -41,6 +41,14 @@ final class MainScreenViewController: UIViewController {
                               isBarShadowOpened: true,
                               title: "Friends")
         setNavigationBarBackBarButtonItem()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "logoutIcon"),
+                                                                   style: .plain,
+                                                                   target: self,
+                                                                   action: #selector(logoutButtonPressed))
+    }
+    
+    @objc func logoutButtonPressed() {
+        viewModel.didPressedLogout()
     }
     
     private func bindViewModel() {

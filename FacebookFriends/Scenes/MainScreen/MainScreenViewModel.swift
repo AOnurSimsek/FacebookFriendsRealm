@@ -72,4 +72,9 @@ final class MainScreenViewModel {
         router.route(to: .detailScreen(userData),
                      sourceVC: source)
     }
+    
+    func didPressedLogout() {
+        router.route(to: .loginScreen,
+                     sourceVC: nil)
+    }
 }

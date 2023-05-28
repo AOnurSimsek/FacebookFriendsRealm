@@ -44,7 +44,6 @@ extension UserProvider: URLRequestConvertible {
         urlRequest.httpMethod = method.rawValue
         urlRequest = try encoding.encode(urlRequest,
                                          with: parameters)
-        print(urlRequest.url)
         return urlRequest
     }
 }

@@ -19,6 +19,7 @@
 		280752ED2A22A56000B00750 /* UserContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280752EC2A22A56000B00750 /* UserContactModel.swift */; };
 		280752EF2A22B17000B00750 /* UserHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280752EE2A22B17000B00750 /* UserHeaderModel.swift */; };
 		280752F12A22E2E200B00750 /* EmailServicesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280752F02A22E2E200B00750 /* EmailServicesEnum.swift */; };
+		280752F32A22FDBD00B00750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280752F22A22FDBD00B00750 /* Assets.xcassets */; };
 		2857B1F72A202C6C00E8D38D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B1F62A202C6C00E8D38D /* UIColor+.swift */; };
 		2857B1FA2A20396000E8D38D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B1F92A20396000E8D38D /* Colors.swift */; };
 		2857B1FD2A203BCC00E8D38D /* InsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B1FC2A203BCC00E8D38D /* InsetLabel.swift */; };
@@ -46,7 +47,6 @@
 		2857B2582A224F4B00E8D38D /* DetailScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2572A224F4B00E8D38D /* DetailScreenRouter.swift */; };
 		2857B25A2A2254E300E8D38D /* CountryCodeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2592A2254E300E8D38D /* CountryCodeEnum.swift */; };
 		28F0CD4F2A1FA7A70055B1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CD4E2A1FA7A70055B1EE /* AppDelegate.swift */; };
-		28F0CD582A1FA7A80055B1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CD572A1FA7A80055B1EE /* Assets.xcassets */; };
 		28F0CD5B2A1FA7A80055B1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CD592A1FA7A80055B1EE /* LaunchScreen.storyboard */; };
 		28F0CD642A1FA9C20055B1EE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28F0CD632A1FA9C20055B1EE /* Alamofire */; };
 		28F0CD672A1FAAAD0055B1EE /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 28F0CD662A1FAAAD0055B1EE /* PromiseKit */; };
@@ -95,6 +95,7 @@
 		280752EC2A22A56000B00750 /* UserContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContactModel.swift; sourceTree = "<group>"; };
 		280752EE2A22B17000B00750 /* UserHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderModel.swift; sourceTree = "<group>"; };
 		280752F02A22E2E200B00750 /* EmailServicesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailServicesEnum.swift; sourceTree = "<group>"; };
+		280752F22A22FDBD00B00750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2857B1F62A202C6C00E8D38D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		2857B1F92A20396000E8D38D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2857B1FC2A203BCC00E8D38D /* InsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLabel.swift; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		2857B2592A2254E300E8D38D /* CountryCodeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeEnum.swift; sourceTree = "<group>"; };
 		28F0CD4B2A1FA7A70055B1EE /* FacebookFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F0CD4E2A1FA7A70055B1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28F0CD572A1FA7A80055B1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28F0CD5A2A1FA7A80055B1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28F0CD5C2A1FA7A80055B1EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28F0CD742A1FAF1D0055B1EE /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
@@ -369,7 +369,7 @@
 				280752F02A22E2E200B00750 /* EmailServicesEnum.swift */,
 				2857B2592A2254E300E8D38D /* CountryCodeEnum.swift */,
 				2857B1F92A20396000E8D38D /* Colors.swift */,
-				28F0CD572A1FA7A80055B1EE /* Assets.xcassets */,
+				280752F22A22FDBD00B00750 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -570,10 +570,10 @@
 				28F0CDD82A201B3D0055B1EE /* SlidingTextField.xib in Resources */,
 				28F0CD5B2A1FA7A80055B1EE /* LaunchScreen.storyboard in Resources */,
 				28F0CDB92A2009EA0055B1EE /* LoginScreenViewController.xib in Resources */,
+				280752F32A22FDBD00B00750 /* Assets.xcassets in Resources */,
 				2857B24E2A22406500E8D38D /* UserProfileHeaderCollectionReusableView.xib in Resources */,
 				2857B2542A224F3100E8D38D /* UserLocationCollectionViewCell.xib in Resources */,
 				280752E52A22968C00B00750 /* UserContactCollectionViewCell.xib in Resources */,
-				28F0CD582A1FA7A80055B1EE /* Assets.xcassets in Resources */,
 				2857B2482A2236AC00E8D38D /* UserTableViewCell.xib in Resources */,
 				280752E12A22933400B00750 /* UserDateofBirthCollectionViewCell.xib in Resources */,
 			);
