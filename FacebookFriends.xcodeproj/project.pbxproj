@@ -785,6 +785,7 @@
 				DEVELOPMENT_TEAM = VZJ488LWGZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FacebookFriends/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Facebook Friends";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -815,6 +816,7 @@
 				DEVELOPMENT_TEAM = VZJ488LWGZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FacebookFriends/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Facebook Friends";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

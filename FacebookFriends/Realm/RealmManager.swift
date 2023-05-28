@@ -19,6 +19,7 @@ final class RealmManager {
     
     init() { }
     
+//    MARK: - Read
     func hasRealmModel(userName: String) -> Bool {
         let realm = try! Realm()
         let userModel = realm.objects(RealmAllUsersModel.self)
@@ -45,6 +46,7 @@ final class RealmManager {
         
     }
     
+//    MARK: - Create
     func addRealmModel(userName: String,
                        userModels: [UserResponseModel],
                        operationType: RealmOperationTypes) {
@@ -90,6 +92,7 @@ final class RealmManager {
         
     }
     
+//    MARK: - Update
     private func updateRealmData(usersString: String) {
         do {
             let realm = try Realm()
