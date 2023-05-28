@@ -36,9 +36,9 @@ final class UserLocationCollectionViewCell: UICollectionViewCell {
     private func setInnerUI(with model: LocationResponseModel) {
         mapButton.isHidden = model.coordinates == nil
         
-        topLabel.text = String(model.street?.number ?? 0) + " " + (model.street?.name ?? "")
+        topLabel.text = String(model.street?.number ?? 0) + " " + (model.street?.name ?? "-")
         middleLabel.text = (model.state ?? " ") + " - " + (model.city ?? " ")
-        bottomLabel.text = (model.country ?? " ")
+        bottomLabel.text = (model.country ?? "-")
     }
     
 }

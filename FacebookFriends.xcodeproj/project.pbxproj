@@ -48,6 +48,7 @@
 		2857B2562A224F4300E8D38D /* DetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2552A224F4300E8D38D /* DetailScreenViewModel.swift */; };
 		2857B2582A224F4B00E8D38D /* DetailScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2572A224F4B00E8D38D /* DetailScreenRouter.swift */; };
 		2857B25A2A2254E300E8D38D /* CountryCodeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B2592A2254E300E8D38D /* CountryCodeEnum.swift */; };
+		2892BAD82A23FDDF00EF62CF /* TextHeightCalculatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892BAD72A23FDDF00EF62CF /* TextHeightCalculatorProtocol.swift */; };
 		28F0CD4F2A1FA7A70055B1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0CD4E2A1FA7A70055B1EE /* AppDelegate.swift */; };
 		28F0CD5B2A1FA7A80055B1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F0CD592A1FA7A80055B1EE /* LaunchScreen.storyboard */; };
 		28F0CD642A1FA9C20055B1EE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28F0CD632A1FA9C20055B1EE /* Alamofire */; };
@@ -122,6 +123,7 @@
 		2857B2552A224F4300E8D38D /* DetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewModel.swift; sourceTree = "<group>"; };
 		2857B2572A224F4B00E8D38D /* DetailScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenRouter.swift; sourceTree = "<group>"; };
 		2857B2592A2254E300E8D38D /* CountryCodeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeEnum.swift; sourceTree = "<group>"; };
+		2892BAD72A23FDDF00EF62CF /* TextHeightCalculatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHeightCalculatorProtocol.swift; sourceTree = "<group>"; };
 		28F0CD4B2A1FA7A70055B1EE /* FacebookFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F0CD4E2A1FA7A70055B1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28F0CD5A2A1FA7A80055B1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				2857B22C2A215ED300E8D38D /* BaseRoutingProtocol.swift */,
 				2857B22E2A215FD200E8D38D /* ScreenBuilder.swift */,
 				2857B2312A216F0800E8D38D /* Populatable.swift */,
+				2892BAD72A23FDDF00EF62CF /* TextHeightCalculatorProtocol.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				28F0CDB82A2009EA0055B1EE /* LoginScreenViewController.swift in Sources */,
 				28F0CD852A1FB0A30055B1EE /* StreetResponseModel.swift in Sources */,
 				2857B2022A20409E00E8D38D /* UITextField+.swift in Sources */,
+				2892BAD82A23FDDF00EF62CF /* TextHeightCalculatorProtocol.swift in Sources */,
 				2857B2532A224F3100E8D38D /* UserLocationCollectionViewCell.swift in Sources */,
 				2857B2322A216F0800E8D38D /* Populatable.swift in Sources */,
 			);

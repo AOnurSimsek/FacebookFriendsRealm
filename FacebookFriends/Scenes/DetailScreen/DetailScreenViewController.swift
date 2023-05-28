@@ -11,8 +11,8 @@ final class DetailScreenViewController: UIViewController {
     
     private lazy var collectionViewLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.width,
-                                          height: .leastNonzeroMagnitude)
+//        layout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.width,
+//                                          height: .leastNonzeroMagnitude)
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
@@ -89,6 +89,12 @@ extension DetailScreenViewController: UICollectionViewDelegate,
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.bounces = false
+        
+        collectionView.contentInset = .init(top: 0,
+                                            left: 0,
+                                            bottom: 50,
+                                            right: 0)
         
         let nibs: [UICollectionViewCell.Type] = [UserContactCollectionViewCell.self,
                                                  UserDateofBirthCollectionViewCell.self,
@@ -159,6 +165,12 @@ extension DetailScreenViewController: UICollectionViewDelegate,
             cell.setDelegate(delegate: self)
             return cell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return viewModel.getCellHeight(for: indexPath.section)
     }
     
 }

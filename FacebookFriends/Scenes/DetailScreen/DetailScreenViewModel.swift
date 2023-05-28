@@ -156,3 +156,104 @@ final class DetailScreenViewModel {
     }
     
 }
+
+extension DetailScreenViewModel: TextHeightCalculatorProtocol {
+    func getCellHeight(for section: Int) -> CGSize {
+        let currentSection = getSection(for: section)
+        
+        let screenWidth: CGFloat = UIScreen.main.bounds.width
+        
+        let baseVerticalSpacing: CGFloat = 15 + 15
+        let baseHorizontalSpacing: CGFloat = 20 + 20
+        let innerStackVerticalSpacing: CGFloat = 10
+        let innterStackHorizontalSpacing: CGFloat = 10
+        let buttonWidthHeight: CGFloat = 30
+        let titleLabelWidth: CGFloat = 115
+        
+        switch currentSection {
+        case .contact(let userContactModel):
+            let baseHeight: CGFloat = baseVerticalSpacing + 30 + 30 + 30 + (innterStackHorizontalSpacing * 2)
+            
+            guard let model = userContactModel
+            else {
+                return .init(width: screenWidth, height: baseHeight)
+            }
+            
+            let phoneLabelText = model.phone ?? "-"
+            let cellPhoneLabelText = model.cellPhone ?? "-"
+            let emailLabelText = model.email ?? "-"
+            
+            let remainingWidth: CGFloat = screenWidth - baseHorizontalSpacing - titleLabelWidth - buttonWidthHeight - (innterStackHorizontalSpacing*2)
+
+            let topLabelHeight: CGFloat = calculateTextRequiredHeight(text: phoneLabelText,
+                                                                      labelWidth: remainingWidth,
+                                                                      font: .systemFont(ofSize: 17))
+            let middleLabelHeight: CGFloat = calculateTextRequiredHeight(text: cellPhoneLabelText,
+                                                                         labelWidth: remainingWidth,
+                                                                         font: .systemFont(ofSize: 17))
+            let bottomLabelHeight: CGFloat = calculateTextRequiredHeight(text: emailLabelText,
+                                                                         labelWidth: remainingWidth - 100,
+                                                                         font: .systemFont(ofSize: 17))
+            
+            let titleHeights: CGFloat = bottomLabelHeight + middleLabelHeight + topLabelHeight
+            let innerVerticalStackHeights: CGFloat = innerStackVerticalSpacing * 2
+            let totalHeight: CGFloat = max(titleHeights, 90) + innerVerticalStackHeights + baseVerticalSpacing
+            
+            return .init(width: screenWidth, height: max(totalHeight, baseHeight))
+            
+        case .dateofBirth:
+            let baseHeight: CGFloat = 21 + 21 + 10 + baseVerticalSpacing
+            return .init(width: screenWidth, height: baseHeight)
+            
+        case .location(let locationModel):
+            let baseHeight: CGFloat = baseVerticalSpacing + 21 + 21 + 21 + (innterStackHorizontalSpacing * 2)
+            
+            guard let model = locationModel
+            else {
+                return .init(width: screenWidth, height: baseHeight)
+            }
+            
+            let topLabel = String(model.street?.number ?? 0) + " " + (model.street?.name ?? "-")
+            let middleLabel = (model.state ?? " ") + " - " + (model.city ?? " ")
+            let bottomLabel = (model.country ?? "-")
+            
+            let remainingWidth: CGFloat = screenWidth - baseHorizontalSpacing - titleLabelWidth - buttonWidthHeight - (innterStackHorizontalSpacing*2)
+            let topLabelHeight: CGFloat = calculateTextRequiredHeight(text: topLabel,
+                                                                      labelWidth: remainingWidth,
+                                                                      font: .systemFont(ofSize: 17))
+            let middleLabelHeight: CGFloat = calculateTextRequiredHeight(text: middleLabel,
+                                                                         labelWidth: remainingWidth,
+                                                                         font: .systemFont(ofSize: 17))
+            let bottomLabelHeight: CGFloat = calculateTextRequiredHeight(text: bottomLabel,
+                                                                         labelWidth: remainingWidth,
+                                                                         font: .systemFont(ofSize: 17))
+            
+            let titleHeights: CGFloat = bottomLabelHeight + middleLabelHeight + topLabelHeight
+            let innerVerticalStackHeights: CGFloat = innerStackVerticalSpacing * 2
+            let totalHeight: CGFloat = titleHeights + innerVerticalStackHeights + baseVerticalSpacing
+            
+            return .init(width: screenWidth, height: max(totalHeight, baseHeight))
+            
+        case .nationality(let country):
+            let baseHeight: CGFloat = 60
+            
+            guard let _country = country,
+                  let countryModel: Iso3166_1a2 = .init(rawValue: _country)
+            else {
+                return .init(width: screenWidth, height: baseHeight)
+            }
+            
+            let countryText = countryModel.country + " "
+            let horizontalSpacing: CGFloat = 3 * innterStackHorizontalSpacing
+            let emojiSize: CGFloat = 100
+            let remainingWidth: CGFloat = screenWidth - titleLabelWidth - horizontalSpacing - buttonWidthHeight - baseHorizontalSpacing - emojiSize
+            let textHeight: CGFloat = calculateTextRequiredHeight(text: countryText,
+                                                                  labelWidth: remainingWidth,
+                                                                  font: .systemFont(ofSize: 17))
+            return .init(width: screenWidth, height: max(baseHeight, textHeight))
+            
+        }
+        
+    }
+    
+}

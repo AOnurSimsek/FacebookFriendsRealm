@@ -49,13 +49,13 @@ class UserContactCollectionViewCell: UICollectionViewCell {
     }
     
     private func setInnerUI(with model: UserContactModel) {
-        phoneStackView.isHidden = model.phone == nil
-        cellPhoneStackView.isHidden = model.cellPhone == nil
-        emailStackView.isHidden = model.email == nil
+        phoneButton.isHidden = model.phone == nil
+        cellPhoneButton.isHidden = model.cellPhone == nil
+        emailButton.isHidden = model.email == nil
         
-        phoneLabel.text = model.phone
-        cellPhoneLabel.text = model.cellPhone
-        emailLabel.text = model.email
+        phoneLabel.text = model.phone ?? "-"
+        cellPhoneLabel.text = model.cellPhone ?? "-"
+        emailLabel.text = model.email ?? "-"
     }
     
 }
