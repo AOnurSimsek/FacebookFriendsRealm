@@ -43,6 +43,7 @@ final class LoginScreenViewController: UIViewController {
     private func setUI() {
         setTextFields()
         setCardView()
+        setStatusbarColor(color: .clear)
     }
     
     private func setTextFields() {
