@@ -11,8 +11,6 @@ final class DetailScreenViewController: UIViewController {
     
     private lazy var collectionViewLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
-//        layout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.width,
-//                                          height: .leastNonzeroMagnitude)
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0

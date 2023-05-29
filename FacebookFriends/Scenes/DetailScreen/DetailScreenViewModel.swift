@@ -246,7 +246,7 @@ extension DetailScreenViewModel: TextHeightCalculatorProtocol {
             
             let countryText = countryModel.country + " "
             let horizontalSpacing: CGFloat = 3 * innterStackHorizontalSpacing
-            let emojiSize: CGFloat = 100
+            let emojiSize: CGFloat = 120
             let remainingWidth: CGFloat = screenWidth - titleLabelWidth - horizontalSpacing - buttonWidthHeight - baseHorizontalSpacing - emojiSize
             let textHeight: CGFloat = calculateTextRequiredHeight(text: countryText,
                                                                   labelWidth: remainingWidth,

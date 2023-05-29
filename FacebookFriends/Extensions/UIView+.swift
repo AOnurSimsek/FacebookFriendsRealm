@@ -39,11 +39,6 @@ extension UIView {
         }
     }
     
-    func makeFullScreenWidth() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width).isActive = true
-    }
-    
     func addRadius(radius: CGFloat) {
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true

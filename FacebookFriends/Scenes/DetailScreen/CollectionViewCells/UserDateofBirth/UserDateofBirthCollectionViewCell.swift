@@ -18,7 +18,6 @@ final class UserDateofBirthCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        mainView.makeFullScreenWidth()
     }
     
     override func prepareForReuse() {

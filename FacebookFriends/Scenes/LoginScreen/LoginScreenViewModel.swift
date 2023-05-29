@@ -7,6 +7,13 @@
 
 import UIKit
 
+enum LoginScreenState {
+    case showProgressHUD
+    case hideProgressHUD
+    case userNameChecked(Bool)
+    case showError(LoginErrors)
+}
+
 enum LoginErrors {
     case invalidUserName
     case invalidPasswod
@@ -27,8 +34,7 @@ final class LoginViewModel {
     private var userName: String?
     private var password: String?
     private let router: LoginRouterProtocol
-    let userNameChecker: Observable<Bool?> = Observable(nil)
-    let loginError: Observable<LoginErrors?> = Observable(nil)
+    let screenState: Observable<LoginScreenState?> = Observable(nil)
     
     init(router: LoginRouterProtocol) {
         self.router = router
@@ -38,24 +44,28 @@ final class LoginViewModel {
         password = text
     }
     
-    func checkUserName(userName: String) {
+    func checkUserName(userName: String) -> Bool {
         let isValid = possibleUserNames.contains(userName)
-        userNameChecker.value = isValid
         self.userName = isValid ? userName : nil
+        screenState.value = .userNameChecked(isValid)
+        return isValid
     }
     
     func didPressLoginButton() {
-        if !(userNameChecker.value ?? false) {
-            loginError.value = .invalidUserName
+        if !(checkUserName(userName: userName ?? "") ) {
+            screenState.value = .showError(.invalidUserName)
+            screenState.value = .hideProgressHUD
             return
         }
         
         if (password ?? "").isEmpty {
-            loginError.value = .invalidPasswod
+            screenState.value = .showError(.invalidPasswod)
+            screenState.value = .hideProgressHUD
             return
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.screenState.value = .hideProgressHUD
             self.router.route(to: .mainScreen(self.userName ?? ""),
                               sourceVC: nil)
         }

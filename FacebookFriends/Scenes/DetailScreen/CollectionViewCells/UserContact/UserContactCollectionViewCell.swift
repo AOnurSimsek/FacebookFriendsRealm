@@ -29,7 +29,6 @@ class UserContactCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        mainView.makeFullScreenWidth()
     }
     
     override func prepareForReuse() {

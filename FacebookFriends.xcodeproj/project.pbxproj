@@ -303,6 +303,23 @@
 			path = InformationView;
 			sourceTree = "<group>";
 		};
+		28C517762A253A9100ED6A28 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2857B2592A2254E300E8D38D /* CountryCodeEnum.swift */,
+				280752F02A22E2E200B00750 /* EmailServicesEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		28C517772A253AA000ED6A28 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2857B1F92A20396000E8D38D /* Colors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		28F0CD422A1FA7A70055B1EE = {
 			isa = PBXGroup;
 			children = (
@@ -324,10 +341,13 @@
 			children = (
 				28F0CD722A1FAEA30055B1EE /* App */,
 				28F0CD6E2A1FAE400055B1EE /* Service */,
+				2857B1F82A20395400E8D38D /* CustomViews */,
 				28F0CD6D2A1FAE350055B1EE /* Scenes */,
 				280752FD2A23BC8700B00750 /* Realm */,
 				2857B2272A2137F100E8D38D /* Utils */,
-				28F0CD6F2A1FAE4B0055B1EE /* Helpers */,
+				28F0CD6F2A1FAE4B0055B1EE /* Extensions */,
+				28C517762A253A9100ED6A28 /* Enums */,
+				28C517772A253AA000ED6A28 /* Constants */,
 				28F0CD712A1FAE890055B1EE /* Resources */,
 				28F0CD702A1FAE740055B1EE /* SupportingFiles */,
 			);
@@ -337,7 +357,6 @@
 		28F0CD6D2A1FAE350055B1EE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				2857B1F82A20395400E8D38D /* CustomViews */,
 				28F0CDB42A2009AE0055B1EE /* LoginScreen */,
 				28F0CDA82A2005E90055B1EE /* MainScreen */,
 				2857B2302A216ED000E8D38D /* DetailScreen */,
@@ -354,7 +373,7 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		28F0CD6F2A1FAE4B0055B1EE /* Helpers */ = {
+		28F0CD6F2A1FAE4B0055B1EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				280752E82A229ED200B00750 /* Date+.swift */,
@@ -368,7 +387,7 @@
 				2857B2392A2187D100E8D38D /* UIApplication+.swift */,
 				2857B24F2A22489C00E8D38D /* UICollectionView+.swift */,
 			);
-			path = Helpers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		28F0CD702A1FAE740055B1EE /* SupportingFiles */ = {
@@ -382,9 +401,6 @@
 		28F0CD712A1FAE890055B1EE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				280752F02A22E2E200B00750 /* EmailServicesEnum.swift */,
-				2857B2592A2254E300E8D38D /* CountryCodeEnum.swift */,
-				2857B1F92A20396000E8D38D /* Colors.swift */,
 				280752F22A22FDBD00B00750 /* Assets.xcassets */,
 			);
 			path = Resources;

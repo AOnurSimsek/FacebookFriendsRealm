@@ -5,12 +5,8 @@
 //  Created by Abdullah onur Şimşek on 25.05.2023.
 //
 
+import Alamofire
 import PromiseKit
-import Alamofire
-
-
-import Foundation
-import Alamofire
 
 protocol UsersAPIProtocol {
     func getResults(with model: ResultsRequestModel) -> Promise<ResultsResponseModel>

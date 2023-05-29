@@ -35,11 +35,6 @@ final class LoginScreenViewController: UIViewController {
         hideKeyboardWhenTappedAround()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        hideProgressHUD()
-    }
-    
     private func setUI() {
         setTextFields()
         setCardView()
@@ -63,22 +58,25 @@ final class LoginScreenViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.userNameChecker.bind { [weak self] isValid in
-            guard let _self = self,
-                  let _isValid = isValid
-            else { return }
-            
-            _self.usernameView.setColor(isValid: _isValid)
+        viewModel.screenState.bind { [weak self] state in
+            switch state {
+            case .showProgressHUD:
+                self?.showProgressHUD()
+                
+            case .hideProgressHUD:
+                self?.hideProgressHUD()
+                
+            case .userNameChecked(let isValid):
+                self?.usernameView.setColor(isValid: isValid)
+                
+            case .showError(let error):
+                self?.showAlert(message: error.description)
+                
+            default:
+                return
+            }
         }
         
-        viewModel.loginError.bind { [weak self] error in
-            guard let _self = self,
-                  let _error = error
-            else { return }
-            
-            _self.hideProgressHUD()
-            _self.showAlert(message: _error.description)
-        }
     }
     
     @IBAction func didPressLoginButton(_ sender: UIButton) {
@@ -104,7 +102,7 @@ extension LoginScreenViewController: SlidingTextFieldDelegate {
                           textFieldType: TextFieldType) {
         switch textFieldType {
         case .username:
-            viewModel.checkUserName(userName: text)
+           _ = viewModel.checkUserName(userName: text)
         case .password:
             viewModel.setPassword(text: text)
         }

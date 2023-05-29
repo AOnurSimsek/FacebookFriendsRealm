@@ -22,7 +22,6 @@ final class UserLocationCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        mainView.makeFullScreenWidth()
     }
     
     override func prepareForReuse() {
