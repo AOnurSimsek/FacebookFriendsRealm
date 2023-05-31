@@ -7,63 +7,12 @@
 
 import UIKit
 
-enum DetailScreenPageState {
-    case reload
-    case error(DetailScreenErrorTypes)
-}
-
-enum DetailScreenErrorTypes: Error {
-    case load
-    case cantOpenPhone
-    case cantOpenSMS
-    case cantOpenMail
-    case cantOpenWikipedia
-    
-    var description: String {
-        switch self {
-        case .load:
-            return "Data could not loaded. Try again later."
-        case .cantOpenPhone:
-            return "Phone could not opened."
-        case .cantOpenSMS:
-            return "Sms app could not opened."
-        case .cantOpenMail:
-            return "Mail app could not opened"
-        case .cantOpenWikipedia:
-            return "Wikipedia page could not opened."
-        }
-    }
-}
-
-enum DetailScreenCollectionViewCellType: Equatable {
-    case contact(UserContactModel?)
-    case dateofBirth(DateOfBirthResponseModel?)
-    case location(LocationResponseModel?)
-    case nationality(String?)
-    
-    static func == (lhs: DetailScreenCollectionViewCellType, rhs: DetailScreenCollectionViewCellType) -> Bool {
-        switch(lhs, rhs) {
-        case (.contact, .contact):
-            return true
-        case (.dateofBirth, .dateofBirth):
-            return true
-        case (.location, .location):
-            return true
-        case (.nationality, .nationality):
-            return true
-        default:
-            return false
-        }
-    }
-    
-}
-
-final class DetailScreenViewModel {
+final class DetailScreenViewModel: DetailScreenViewModelProtocol {
     
     private let userModel: UserResponseModel
     private let router: DetailScreenRouterProtocol
     private var detailSections: [DetailScreenCollectionViewCellType] = []
-    let appState: Observable<DetailScreenPageState?> = Observable(nil)
+    var appState: Observable<DetailScreenPageState?> = Observable(nil)
     
     init(userModel: UserResponseModel,
          router: DetailScreenRouterProtocol) {
@@ -158,7 +107,7 @@ final class DetailScreenViewModel {
 }
 
 // MARK: - CollectionViewHeightCalculator
-extension DetailScreenViewModel: TextHeightCalculatorProtocol {
+extension DetailScreenViewModel {
     func getCellHeight(for section: Int) -> CGSize {
         let currentSection = getSection(for: section)
         

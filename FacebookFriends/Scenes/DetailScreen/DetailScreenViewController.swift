@@ -26,9 +26,9 @@ final class DetailScreenViewController: UIViewController {
         return collectionView
     }()
     
-    private let viewModel: DetailScreenViewModel
+    private let viewModel: DetailScreenViewModelProtocol
     
-    init(viewModel: DetailScreenViewModel) {
+    init(viewModel: DetailScreenViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil,
                    bundle: nil)

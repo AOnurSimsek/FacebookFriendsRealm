@@ -16,9 +16,9 @@ final class LoginScreenViewController: UIViewController {
     @IBOutlet weak var passwordView: SlidingTextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    private var viewModel: LoginViewModel
+    private var viewModel: LoginViewModelProtocol
     
-    init(viewModel: LoginViewModel) {
+    init(viewModel: LoginViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil,
                    bundle: nil)

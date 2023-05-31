@@ -23,6 +23,9 @@
 		280752FC2A23B20500B00750 /* DateOfBirthResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280752FB2A23B20500B00750 /* DateOfBirthResponseModel.swift */; };
 		280753002A23BCD000B00750 /* RealmUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280752FF2A23BCD000B00750 /* RealmUserModel.swift */; };
 		280753042A23C1BD00B00750 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280753032A23C1BD00B00750 /* RealmManager.swift */; };
+		2840656E2A27F5210097311C /* LoginScreenContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2840656D2A27F5210097311C /* LoginScreenContracts.swift */; };
+		284065712A27F63F0097311C /* MainScreenContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284065702A27F63F0097311C /* MainScreenContracts.swift */; };
+		284065732A27F6EE0097311C /* DetailScreenContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284065722A27F6EE0097311C /* DetailScreenContracts.swift */; };
 		2857B1F72A202C6C00E8D38D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B1F62A202C6C00E8D38D /* UIColor+.swift */; };
 		2857B1FA2A20396000E8D38D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B1F92A20396000E8D38D /* Colors.swift */; };
 		2857B1FD2A203BCC00E8D38D /* InsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857B1FC2A203BCC00E8D38D /* InsetLabel.swift */; };
@@ -98,6 +101,9 @@
 		280752FB2A23B20500B00750 /* DateOfBirthResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateOfBirthResponseModel.swift; sourceTree = "<group>"; };
 		280752FF2A23BCD000B00750 /* RealmUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserModel.swift; sourceTree = "<group>"; };
 		280753032A23C1BD00B00750 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		2840656D2A27F5210097311C /* LoginScreenContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenContracts.swift; sourceTree = "<group>"; };
+		284065702A27F63F0097311C /* MainScreenContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenContracts.swift; sourceTree = "<group>"; };
+		284065722A27F6EE0097311C /* DetailScreenContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenContracts.swift; sourceTree = "<group>"; };
 		2857B1F62A202C6C00E8D38D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		2857B1F92A20396000E8D38D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2857B1FC2A203BCC00E8D38D /* InsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLabel.swift; sourceTree = "<group>"; };
@@ -261,6 +267,7 @@
 				2857B23D2A2192F900E8D38D /* DetailScreenViewController.swift */,
 				2857B2552A224F4300E8D38D /* DetailScreenViewModel.swift */,
 				2857B2572A224F4B00E8D38D /* DetailScreenRouter.swift */,
+				284065722A27F6EE0097311C /* DetailScreenContracts.swift */,
 			);
 			path = DetailScreen;
 			sourceTree = "<group>";
@@ -492,6 +499,7 @@
 				28F0CDAB2A2006010055B1EE /* MainScreenViewController.swift */,
 				28F0CDA92A2005F90055B1EE /* MainScreenViewModel.swift */,
 				28F0CDAD2A2006080055B1EE /* MainScreenRouter.swift */,
+				284065702A27F63F0097311C /* MainScreenContracts.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -503,6 +511,7 @@
 				28F0CDB62A2009EA0055B1EE /* LoginScreenViewController.swift */,
 				2857B2252A21332500E8D38D /* LoginScreenViewModel.swift */,
 				2857B22A2A215E9D00E8D38D /* LoginRouter.swift */,
+				2840656D2A27F5210097311C /* LoginScreenContracts.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -618,6 +627,7 @@
 				2857B2042A211E5600E8D38D /* UIViewController+.swift in Sources */,
 				2857B2472A2236AC00E8D38D /* UserTableViewCell.swift in Sources */,
 				280752EB2A229F0500B00750 /* String.swift in Sources */,
+				2840656E2A27F5210097311C /* LoginScreenContracts.swift in Sources */,
 				2857B2562A224F4300E8D38D /* DetailScreenViewModel.swift in Sources */,
 				2857B23E2A2192F900E8D38D /* DetailScreenViewController.swift in Sources */,
 				28F0CDA72A1FC1C00055B1EE /* Encodable+.swift in Sources */,
@@ -641,6 +651,7 @@
 				28F0CDAC2A2006010055B1EE /* MainScreenViewController.swift in Sources */,
 				28F0CDAE2A2006080055B1EE /* MainScreenRouter.swift in Sources */,
 				280753042A23C1BD00B00750 /* RealmManager.swift in Sources */,
+				284065712A27F63F0097311C /* MainScreenContracts.swift in Sources */,
 				2857B23A2A2187D100E8D38D /* UIApplication+.swift in Sources */,
 				28F0CD9E2A1FB8AC0055B1EE /* Service.swift in Sources */,
 				28F0CDA32A1FBA4E0055B1EE /* NetworkRequestable.swift in Sources */,
@@ -663,6 +674,7 @@
 				2857B2022A20409E00E8D38D /* UITextField+.swift in Sources */,
 				2892BAD82A23FDDF00EF62CF /* TextHeightCalculatorProtocol.swift in Sources */,
 				2857B2532A224F3100E8D38D /* UserLocationCollectionViewCell.swift in Sources */,
+				284065732A27F6EE0097311C /* DetailScreenContracts.swift in Sources */,
 				2857B2322A216F0800E8D38D /* Populatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

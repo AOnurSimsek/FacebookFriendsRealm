@@ -7,20 +7,7 @@
 
 import UIKit
 
-enum GetUserDataStarterType {
-    case refresh
-    case normal
-}
-
-enum MainScreenState {
-    case showProgressHUD
-    case hideProgressHUD
-    case hideRefreshHUD
-    case dataReached
-    case error(String)
-}
-
-final class MainScreenViewModel {
+final class MainScreenViewModel: MainScreenViewModelProtocol {
     
     private var userModel: [UserResponseModel]?
     private let userName: String
@@ -28,7 +15,7 @@ final class MainScreenViewModel {
     private let router: MainScreenRouterProtocol
     private let realmManager: RealmManager
     
-    let screenState: Observable<MainScreenState?> = Observable(nil)
+    var screenState: Observable<MainScreenState?> = Observable(nil)
     
     init(userName: String,
          networkService: UsersAPIProtocol,

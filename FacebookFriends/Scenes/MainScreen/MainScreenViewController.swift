@@ -11,9 +11,9 @@ final class MainScreenViewController: UIViewController {
     
     private lazy var tableView = UITableView()
     private let refreshControl = UIRefreshControl()
-    private let viewModel: MainScreenViewModel
+    private let viewModel: MainScreenViewModelProtocol
     
-    init(viewModel: MainScreenViewModel) {
+    init(viewModel: MainScreenViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil,
                    bundle: nil)

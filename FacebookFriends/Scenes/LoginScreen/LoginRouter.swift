@@ -7,16 +7,6 @@
 
 import UIKit
 
-enum LoginRouterPageType {
-    case mainScreen(String)
-}
-
-protocol LoginRouterProtocol: BaseRoutingProtocol,
-                              AnyObject {
-    func route(to page: LoginRouterPageType,
-               sourceVC: UIViewController?)
-}
-
 final class loginRouter: LoginRouterProtocol {
     func route(to page: LoginRouterPageType,
                sourceVC: UIViewController?) {

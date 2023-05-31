@@ -7,17 +7,6 @@
 
 import UIKit
 
-enum MainScreenRouterPageType {
-    case loginScreen
-    case detailScreen(UserResponseModel)
-}
-
-protocol MainScreenRouterProtocol: BaseRoutingProtocol,
-                                   AnyObject {
-    func route(to page: MainScreenRouterPageType,
-               sourceVC: UIViewController?)
-}
-
 final class MainScreenRouter: MainScreenRouterProtocol {
     func route(to page: MainScreenRouterPageType,
                sourceVC: UIViewController?) {

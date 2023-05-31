@@ -8,19 +8,6 @@
 import UIKit
 import MapKit
 
-enum DetailScreenRouterPageType {
-    case phone(String)
-    case message(String)
-    case email(String)
-    case map(Double,Double)
-    case wikipedia(URL)
-}
-
-protocol DetailScreenRouterProtocol: BaseRoutingProtocol,
-                                     AnyObject {
-    func route(to page: DetailScreenRouterPageType) throws
-}
-
 final class DetailScreenRouter: DetailScreenRouterProtocol {
     func route(to page: DetailScreenRouterPageType) throws {
         switch page {

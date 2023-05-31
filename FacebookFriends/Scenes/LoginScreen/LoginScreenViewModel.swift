@@ -7,34 +7,12 @@
 
 import UIKit
 
-enum LoginScreenState {
-    case showProgressHUD
-    case hideProgressHUD
-    case userNameChecked(Bool)
-    case showError(LoginErrors)
-}
-
-enum LoginErrors {
-    case invalidUserName
-    case invalidPasswod
-    
-    var description: String {
-        switch self {
-        case .invalidUserName:
-            return "Invalid Username"
-        case .invalidPasswod:
-            return "Empty Password"
-        }
-    }
-}
-
-final class LoginViewModel {
-    
+final class LoginViewModel: LoginViewModelProtocol {
     private let possibleUserNames: [String] = ["9nd54","v542w","17pcy0","gbf48","zdah4"]
     private var userName: String?
     private var password: String?
     private let router: LoginRouterProtocol
-    let screenState: Observable<LoginScreenState?> = Observable(nil)
+    var screenState: Observable<LoginScreenState?> = Observable(nil)
     
     init(router: LoginRouterProtocol) {
         self.router = router
