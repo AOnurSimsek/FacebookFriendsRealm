@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserContactCollectionViewCell: UICollectionViewCell {
+final class UserContactCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var seperatorView: UIView!
